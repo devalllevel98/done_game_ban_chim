@@ -1,5 +1,6 @@
 /* Developed by Eng Mouaz M AlShahmeh */
 import 'package:duck_hunt_flutter_game/src/application/riverpod.dart';
+import 'package:duck_hunt_flutter_game/src/buble.dart';
 import 'package:duck_hunt_flutter_game/src/domain/duck.dart';
 import 'package:duck_hunt_flutter_game/src/presentation/widgets/dog.dart';
 import 'package:duck_hunt_flutter_game/src/presentation/widgets/duck.dart';
@@ -30,11 +31,11 @@ class MyGame extends ConsumerWidget {
                 ? Colors.red[200]
                 : gunClicked
                     ? Colors.white
-                    : Colors.blue[400],
+                    : Colors.black,
             body:  Stack(
 
                   children: [
-
+                  Bubbles(numberOfBubbles: 80, maxBubbleSize: 10),
                 GestureDetector(
                 onTapUp: (event) {
           ref.read(appProvider.notifier).shotGun(context, event);

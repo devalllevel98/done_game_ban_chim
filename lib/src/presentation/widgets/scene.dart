@@ -1,4 +1,8 @@
 /* Developed by Eng Mouaz M AlShahmeh */
+import 'dart:io';
+
+import 'package:duck_hunt_flutter_game/gui.dart';
+import 'package:duck_hunt_flutter_game/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../application/riverpod.dart';
@@ -267,10 +271,49 @@ Widget iLoose(BuildContext context, WidgetRef ref) {
                 ref.read(appProvider.notifier).getDucksLevel(context, 0);
               },
               child: const Text(
-                'Play Again?',
+                'Play Again',
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => MenuScreen()),
+                
+              );
+              },
+              child: const Text(
+                'Back Menu',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+               
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Guiline()),
+                
+              );
+              //  ref.read(appProvider.notifier).restartGame();
+              //   ref.read(appProvider.notifier).getDucksLevel(context, 0);
+              },
+              child: const Text(
+                'Guideline',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                exit(0);
+              },
+              child: const Text(
+                'Quit App',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+
           ],
         ),
       ),
@@ -304,7 +347,45 @@ Widget iWin(BuildContext context, WidgetRef ref) {
                 ref.read(appProvider.notifier).getDucksLevel(context, 0);
               },
               child: const Text(
-                'Truly impressive score.Play Again?',
+                'Play Again',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => MenuScreen()),
+                
+              );
+              },
+              child: const Text(
+                'Back Menu',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+               
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Guiline()),
+                
+              );
+              //  ref.read(appProvider.notifier).restartGame();
+              //   ref.read(appProvider.notifier).getDucksLevel(context, 0);
+              },
+              child: const Text(
+                'Guideline',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                exit(0);
+              },
+              child: const Text(
+                'Quit App',
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
@@ -372,7 +453,45 @@ Widget iGamePaused(BuildContext context, WidgetRef ref) {
                 ref.read(appProvider.notifier).getDucksLevel(context, 0);
               },
               child: const Text(
-                'Restart Game?',
+                'Restart Game',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => MenuScreen()),
+                
+              );
+              },
+              child: const Text(
+                'Back Menu',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+               
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => Guiline()),
+                
+              );
+              //  ref.read(appProvider.notifier).restartGame();
+              //   ref.read(appProvider.notifier).getDucksLevel(context, 0);
+              },
+              child: const Text(
+                'Guideline',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                exit(0);
+              },
+              child: const Text(
+                'Quit App',
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
